@@ -1,2 +1,9 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if user_signed_in? %>
+  <p>Coucou <%= current_user.email %> t'es bien connecté</p>
+  <%= link_to "Deconnecte toi ici", destroy_user_session_path, data: { turbo_method: :delete } %>
+<% else %>
+  <p>Il n'y a personne !</p>
+  <p>connecte toi <%= link_to "ici", new_user_session_path  %></p>
+<% end %>
