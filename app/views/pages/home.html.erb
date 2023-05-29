@@ -5,5 +5,5 @@
   <%= link_to "Deconnecte toi ici", destroy_user_session_path, data: { turbo_method: :delete } %>
 <% else %>
   <p>Il n'y a personne !</p>
-  <p>connecte toi <%= link_to "ici", new_user_session_path, class: "btn btn-primary"  %></p>
+  <p>connecte toi <%= link_to "ici", new_user_session_path, class: "btn btn-outline-primary"  %></p>
 <% end %>
